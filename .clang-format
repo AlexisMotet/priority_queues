@@ -1,0 +1,21 @@
+ColumnLimit: 80
+IndentWidth: 4
+#https://stackoverflow.com/questions/55792370/how-to-create-category-for-external-headers-in-clang-format
+SortIncludes: true
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority:        2
+    SortPriority:    2
+    CaseSensitive:   true
+  - Regex:           '^((<|")(gtest|gmock|isl|json)/)'
+    Priority:        3
+  - Regex:           '<[[:alnum:].]+>'
+    Priority:        4
+  - Regex:           '.*'
+    Priority:        1
+    SortPriority:    0
+MaxEmptyLinesToKeep: 2
+SeparateDefinitionBlocks: Always
+#IndentAccessModifiers: true
+AllowShortFunctionsOnASingleLine: Empty

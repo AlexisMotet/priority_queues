@@ -1,0 +1,12 @@
+Checks: >-
+  cppcoreguidelines-*,performance-*,modernize-*,google-*,misc-*,cert-*,
+  readability-*,readability-function-size,clang-analyzer-*,
+  -modernize-use-trailing-return-type,-modernize-return-braced-init-list,
+  -misc-const-correctness,-modernize-use-nodiscard,-readability-identifier-length,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic,-cppcoreguidelines-pro-type-reinterpret-cast,
+  -modernize-avoid-c-arrays, -cppcoreguidelines-avoid-c-arrays, -google-explicit-constructor
+CheckOptions:
+  - key: readability-function-size.LineThreshold
+    value: '10'
+  - key: readability-function-size.BranchThreshold
+    value: '2'
